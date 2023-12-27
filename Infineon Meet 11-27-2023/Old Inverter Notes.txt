@@ -1,0 +1,3 @@
+1. D1, D2, D3, D4 are all Infineon's Bat165 diode.
+2. Desaturation Protection timing capacitance is 330pF total.
+3. D5 and D6 are UF4007 not 1n4007

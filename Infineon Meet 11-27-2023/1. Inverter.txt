@@ -1,0 +1,4 @@
+1. Planning on using dual supply to switch IGBTs.
+2. Planning on a higher current capability.
+3. Planning to properly implement desaturation protection.
+4. Used to Power a Linear Induction Motor

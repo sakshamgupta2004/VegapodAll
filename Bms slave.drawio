@@ -1,0 +1,86 @@
+<mxfile host="app.diagrams.net" modified="2023-12-12T07:37:16.962Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 Edg/119.0.0.0" etag="Bmd7ZwH_KwHhgCmZ6III" version="22.1.7" type="device">
+  <diagram name="Page-1" id="a0lfwsUJ961khdICnRcy">
+    <mxGraphModel dx="996" dy="1677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-1" target="oOcfiin4sPg_zZ4bHmm8-22" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6oF9Hygg5boFpSMaoJI7-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="oOcfiin4sPg_zZ4bHmm8-1" target="6oF9Hygg5boFpSMaoJI7-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-1" value="Monitoring IC" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-2" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="330" as="sourcePoint" />
+            <mxPoint x="420" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-4" target="oOcfiin4sPg_zZ4bHmm8-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-4" value="MCU" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-7" target="oOcfiin4sPg_zZ4bHmm8-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-7" value="Isolated ransmitter" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-9" target="oOcfiin4sPg_zZ4bHmm8-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-9" value="Isolated Receiver" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-11" target="oOcfiin4sPg_zZ4bHmm8-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-11" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="60" />
+              <mxPoint x="700" y="60" />
+              <mxPoint x="700" y="161" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-11" value="Auxilliary power" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-12" target="oOcfiin4sPg_zZ4bHmm8-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-12" value="Iso. PSU" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="100" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-16" target="oOcfiin4sPg_zZ4bHmm8-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="oOcfiin4sPg_zZ4bHmm8-16" target="oOcfiin4sPg_zZ4bHmm8-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-16" value="In Port" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-19" value="Out Port" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-22" value="12S to be monitored" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="420" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="oOcfiin4sPg_zZ4bHmm8-24" value="&lt;b&gt;&lt;font style=&quot;font-size: 27px;&quot;&gt;Slave Board for BMS&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="50" width="850" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6oF9Hygg5boFpSMaoJI7-1" value="Balance Resistors" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="550" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

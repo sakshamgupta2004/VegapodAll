@@ -1,0 +1,7 @@
+1. Power- 20kW
+2. Input voltage - 150V to 200V
+3. Output Voltage - 500 - 600V
+4. Size Constraint - Lower Inductance, Higher Frequency
+5. Inductance - 10uH to 20uH
+6. Frequency - Over 200kHz (in order to minimize inductor ripple current and hence, losses)
+7. Powers the inverter which in turn powers the Induction Motor.

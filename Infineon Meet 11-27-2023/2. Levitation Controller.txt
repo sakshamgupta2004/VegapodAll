@@ -1,0 +1,4 @@
+1. Similar to the inverter. It differs in being a constant current DC source instead of a SPWM source.
+2. Implements current feedback .
+3. Receives a current set point from PID controller.
+4. Powers EMS (Electromagnetic Suspension) Coils using constant current control.

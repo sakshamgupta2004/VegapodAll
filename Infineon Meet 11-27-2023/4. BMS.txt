@@ -1,0 +1,4 @@
+1. Master - Slave Design
+2. Each slave to monitor - 6 or 12 cells
+3. Features required - measures temperatures of all of the 8 battery packs, balance charging, over discharging protection, over current protection
+4. Needed for protecting our battery pack.

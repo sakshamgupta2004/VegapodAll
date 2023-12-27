@@ -1,0 +1,2 @@
+1. The electrical system block diagram contains one boost converter, one inverter and one motor. All these 3 components are to be duplicated.
+2. Each battery box contains 2 of 6S batteries and 4 of such boxes are connected in series.
