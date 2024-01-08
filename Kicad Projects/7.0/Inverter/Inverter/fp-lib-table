@@ -5,4 +5,5 @@
   (lib (name "B0505-2W")(type "KiCad")(uri "${KIPRJMOD}/Libraries/B0505S-2W")(options "")(descr ""))
   (lib (name "FF300")(type "KiCad")(uri "${KIPRJMOD}/Libraries/UNK_Infineon_FF300R12KS4HOSA1/eec.models")(options "")(descr ""))
   (lib (name "25V 1000uf")(type "KiCad")(uri "${KIPRJMOD}/Libraries/EEEFK1E102AQ")(options "")(descr ""))
+  (lib (name "8205a")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FS8205")(options "")(descr ""))
 )
