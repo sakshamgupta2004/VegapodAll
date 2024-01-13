@@ -428,8 +428,8 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
-      "vrml": ""
+      "step": "BMS LTC6804-2.step",
+      "vrml": "BMS LTC6804-2.wrl"
     },
     "page_layout_descr_file": ""
   },
