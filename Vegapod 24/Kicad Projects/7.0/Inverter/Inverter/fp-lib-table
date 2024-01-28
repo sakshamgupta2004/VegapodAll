@@ -8,4 +8,5 @@
   (lib (name "8205a")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FS8205")(options "")(descr ""))
   (lib (name "Blue Pill")(type "KiCad")(uri "${KIPRJMOD}/Libraries/Bluepill/chinabluepill.pretty")(options "")(descr ""))
   (lib (name "ADUM4195-1")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ADUM4195-1/footprints.pretty")(options "")(descr ""))
+  (lib (name "62MM Igbt")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FF300 IGBT Manual")(options "")(descr ""))
 )
