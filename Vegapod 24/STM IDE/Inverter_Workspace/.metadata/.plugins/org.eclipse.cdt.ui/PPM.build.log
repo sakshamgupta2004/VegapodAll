@@ -1,0 +1,10 @@
+15:26:20 **** Build of configuration Debug for project PPM ****
+make -j20 all 
+arm-none-eabi-size   PPM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7812	     20	   1644	   9476	   2504	PPM.elf
+Finished building: default.size.stdout
+ 
+
+15:26:20 Build Finished. 0 errors, 0 warnings. (took 167ms)
+

@@ -1,0 +1,269 @@
+17:14:54 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   2644	   8176	   1ff0	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+17:15:40 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   2644	   8176	   1ff0	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+17:24:02 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-size   BLDC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   2644	   8176	   1ff0	BLDC.elf
+Finished building: default.size.stdout
+ 
+17:41:35 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:103:11: error: 'USART_TypeDef' has no member named 'CCR1'; did you mean 'CR1'?
+  103 |   USART1->CCR1 = 100;
+      |           ^~~~
+      |           CR1
+../Core/Src/main.c:105:11: error: 'USART_TypeDef' has no member named 'CCR1'; did you mean 'CR1'?
+  105 |   USART1->CCR1 = 50;
+      |           ^~~~
+      |           CR1
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+17:42:59 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:3: warning: implicit declaration of function 'HAL_UART_Start_IT'; did you mean 'HAL_UART_Abort_IT'? [-Wimplicit-function-declaration]
+  100 |   HAL_UART_Start_IT(&huart1, data, sizeof(data));
+      |   ^~~~~~~~~~~~~~~~~
+      |   HAL_UART_Abort_IT
+../Core/Src/main.c:103:11: error: 'USART_TypeDef' has no member named 'CCR1'; did you mean 'CR1'?
+  103 |   USART1->CCR1 = 100;
+      |           ^~~~
+      |           CR1
+../Core/Src/main.c:105:11: error: 'USART_TypeDef' has no member named 'CCR1'; did you mean 'CR1'?
+  105 |   USART1->CCR1 = 50;
+      |           ^~~~
+      |           CR1
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+17:46:02 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:3: warning: implicit declaration of function 'HAL_UART_Start_IT'; did you mean 'HAL_UART_Abort_IT'? [-Wimplicit-function-declaration]
+  100 |   HAL_UART_Start_IT(&huart1, data, sizeof(data));
+      |   ^~~~~~~~~~~~~~~~~
+      |   HAL_UART_Abort_IT
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:100: undefined reference to `HAL_UART_Start_IT'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: BLDC.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+17:46:40 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   2644	   8176	   1ff0	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+17:49:14 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:53:14: error: 'start' undeclared here (not in a function)
+   53 | uint8_t data[start];
+      |              ^~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+17:49:35 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+17:56:18 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-size   BLDC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+18:01:45 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-size   BLDC.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+18:14:38 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+18:16:25 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+18:20:33 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   3644	   9176	   23d8	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+18:22:51 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:78:11: warning: unused variable 'MSG2' [-Wunused-variable]
+   78 |   uint8_t MSG2[] = "Button State: Pressed\r\n";
+      |           ^~~~
+../Core/Src/main.c:77:11: warning: unused variable 'MSG1' [-Wunused-variable]
+   77 |   uint8_t MSG1[] = "Button State: Released\r\n";
+      |           ^~~~
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5792	     20	   3644	   9456	   24f0	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 
+18:27:07 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:88:34: error: 'PA10' undeclared (first use in this function)
+   88 |      if(HAL_GPIO_ReadPin (GPIOB, PA10))
+      |                                  ^~~~
+../Core/Src/main.c:88:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:55:13: warning: 'MX_GPIO_Init' used but never defined
+   55 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_USART1_UART_Init' used but never defined
+   56 | static void MX_USART1_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+18:27:34 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:88:34: error: 'RX1' undeclared (first use in this function)
+   88 |      if(HAL_GPIO_ReadPin (GPIOB, RX1))
+      |                                  ^~~
+../Core/Src/main.c:88:34: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:55:13: warning: 'MX_GPIO_Init' used but never defined
+   55 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_USART1_UART_Init' used but never defined
+   56 | static void MX_USART1_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+18:27:58 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:55:13: warning: 'MX_GPIO_Init' used but never defined
+   55 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:56:13: warning: 'MX_USART1_UART_Init' used but never defined
+   56 | static void MX_USART1_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:81: undefined reference to `SystemClock_Config'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:82: undefined reference to `MX_GPIO_Init'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:83: undefined reference to `MX_USART1_UART_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: BLDC.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+18:31:11 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: ./Core/Src/main.o: in function `main':
+C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:81: undefined reference to `SystemClock_Config'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:82: undefined reference to `MX_GPIO_Init'
+c:\st\stm32cubeide_1.10.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.win32_1.0.0.202111181127\tools\arm-none-eabi\bin\ld.exe: C:/Users/saksh/STM32CubeIDE/Inverter_Workspace/BLDC/BLDC/Debug/../Core/Src/main.c:83: undefined reference to `MX_USART1_UART_Init'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:65: BLDC.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+18:38:10 **** Incremental Build of configuration Debug for project BLDC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "BLDC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\BLDC\BLDC\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BLDC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BLDC.elf
+ 
+arm-none-eabi-size   BLDC.elf 
+arm-none-eabi-objdump -h -S  BLDC.elf  > "BLDC.list"
+   text	   data	    bss	    dec	    hex	filename
+   5512	     20	   2644	   8176	   1ff0	BLDC.elf
+Finished building: default.size.stdout
+ 
+Finished building: BLDC.list
+ 

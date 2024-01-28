@@ -1,0 +1,10 @@
+15:26:18 **** Build of configuration Debug for project Current Controller ****
+make -j20 all 
+arm-none-eabi-size   Current\ Controller.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11048	     20	   1748	  12816	   3210	Current Controller.elf
+Finished building: default.size.stdout
+ 
+
+15:26:18 Build Finished. 0 errors, 0 warnings. (took 185ms)
+

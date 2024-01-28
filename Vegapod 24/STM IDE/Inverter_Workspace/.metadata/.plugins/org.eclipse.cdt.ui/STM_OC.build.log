@@ -1,0 +1,17 @@
+16:48:23 **** Incremental Build of configuration Debug for project STM_OC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "STM_OC.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\STM_OC\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM_OC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM_OC.elf
+ 
+arm-none-eabi-size   STM_OC.elf 
+arm-none-eabi-objdump -h -S  STM_OC.elf  > "STM_OC.list"
+   text	   data	    bss	    dec	    hex	filename
+   7488	     20	   1644	   9152	   23c0	STM_OC.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM_OC.list
+ 
+
+16:48:23 Build Finished. 0 errors, 0 warnings. (took 469ms)
+

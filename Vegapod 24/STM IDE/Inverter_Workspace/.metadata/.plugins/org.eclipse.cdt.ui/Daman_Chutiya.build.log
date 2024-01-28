@@ -1,0 +1,37 @@
+15:26:18 **** Build of configuration Debug for project Daman_Chutiya ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:151:13: error: invalid storage class for function 'MX_TIM1_Init'
+  151 | static void MX_TIM1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:226:13: error: invalid storage class for function 'MX_GPIO_Init'
+  226 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:251:1: error: expected declaration or statement at end of input
+  251 | }
+      | ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:13: warning: 'MX_GPIO_Init' used but never defined
+   50 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:51:13: warning: 'MX_TIM1_Init' used but never defined
+   51 | static void MX_TIM1_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:242:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  242 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:226:13: warning: 'MX_GPIO_Init' defined but not used [-Wunused-function]
+  226 | static void MX_GPIO_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:151:13: warning: 'MX_TIM1_Init' defined but not used [-Wunused-function]
+  151 | static void MX_TIM1_Init(void)
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:112:6: warning: 'SystemClock_Config' defined but not used [-Wunused-function]
+  112 | void SystemClock_Config(void)
+      |      ^~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+
+15:26:18 Build Failed. 4 errors, 6 warnings. (took 487ms)
+

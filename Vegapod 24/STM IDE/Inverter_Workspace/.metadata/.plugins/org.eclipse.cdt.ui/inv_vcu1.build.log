@@ -1,0 +1,33 @@
+18:45:06 **** Incremental Build of configuration Debug for project inv_vcu1 ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'startSPWM':
+../Core/Src/main.c:518:16: warning: implicit declaration of function 'sin' [-Wimplicit-function-declaration]
+  518 |   lookUp[i] = (sin(2 * 3.14 * ((double)i/(double)samples)) * (TIM1->ARR / 2.05)) * amp  + (TIM1->ARR / 2);
+      |                ^~~
+../Core/Src/main.c:518:16: warning: incompatible implicit declaration of built-in function 'sin'
+../Core/Src/main.c:28:1: note: include '<math.h>' or provide a declaration of 'sin'
+   27 | #include <stdlib.h>
+  +++ |+#include <math.h>
+   28 | #define n 6
+../Core/Src/main.c: In function 'HAL_CAN_RxFifo0MsgPendingCallback':
+../Core/Src/main.c:118:20: warning: '%s' directive writing up to 7 bytes into a region of size 5 [-Wformat-overflow=]
+  118 |     sprintf(strr, "%s", RxData);
+      |                    ^~   ~~~~~~
+../Core/Src/main.c:118:5: note: 'sprintf' output between 1 and 8 bytes into a destination of size 5
+  118 |     sprintf(strr, "%s", RxData);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "inv_vcu1.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Download\inv_vcu1\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="inv_vcu1.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: inv_vcu1.elf
+ 
+arm-none-eabi-size   inv_vcu1.elf 
+arm-none-eabi-objdump -h -S  inv_vcu1.elf  > "inv_vcu1.list"
+   text	   data	    bss	    dec	    hex	filename
+  29480	    120	   1840	  31440	   7ad0	inv_vcu1.elf
+Finished building: default.size.stdout
+ 
+Finished building: inv_vcu1.list
+ 
+
+18:45:07 Build Finished. 0 errors, 3 warnings. (took 739ms)
+

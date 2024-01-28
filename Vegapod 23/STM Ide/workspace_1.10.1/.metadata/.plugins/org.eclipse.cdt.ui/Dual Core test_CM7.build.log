@@ -1,0 +1,10 @@
+18:24:07 **** Incremental Build of configuration Debug for project Dual Core test_CM7 ****
+make -j20 all 
+arm-none-eabi-size   Dual\ Core\ test_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  98264	    352	  35704	 134320	  20cb0	Dual Core test_CM7.elf
+Finished building: default.size.stdout
+ 
+
+18:24:07 Build Finished. 0 errors, 0 warnings. (took 534ms)
+

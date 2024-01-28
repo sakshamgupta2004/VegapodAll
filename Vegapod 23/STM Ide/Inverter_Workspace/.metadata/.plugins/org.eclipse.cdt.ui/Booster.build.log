@@ -1,0 +1,10 @@
+15:26:18 **** Build of configuration Debug for project Booster ****
+make -j20 all 
+arm-none-eabi-size   Booster.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8544	     20	   1644	  10208	   27e0	Booster.elf
+Finished building: default.size.stdout
+ 
+
+15:26:18 Build Finished. 0 errors, 0 warnings. (took 195ms)
+

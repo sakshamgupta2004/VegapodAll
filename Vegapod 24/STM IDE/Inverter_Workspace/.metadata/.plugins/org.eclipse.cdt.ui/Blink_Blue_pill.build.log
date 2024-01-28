@@ -1,0 +1,10 @@
+03:22:59 **** Build of configuration Debug for project Blink_Blue_pill ****
+make -j20 all 
+arm-none-eabi-size   Blink_Blue_pill.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4568	     20	   1572	   6160	   1810	Blink_Blue_pill.elf
+Finished building: default.size.stdout
+ 
+
+03:22:59 Build Finished. 0 errors, 0 warnings. (took 156ms)
+

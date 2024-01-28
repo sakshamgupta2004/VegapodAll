@@ -1,0 +1,26 @@
+03:23:00 **** Build of configuration Debug for project SPWM_new_method_mostly_software ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:117:25: warning: implicit declaration of function 'sin' [-Wimplicit-function-declaration]
+  117 |    uint32_t curr_val = (sin((HAL_GetTick()/1000.0) * 3.14 * 2 * sinFreq) * 3600) + 3600;
+      |                         ^~~
+../Core/Src/main.c:117:25: warning: incompatible implicit declaration of built-in function 'sin'
+../Core/Src/main.c:21:1: note: include '<math.h>' or provide a declaration of 'sin'
+   20 | #include "main.h"
+  +++ |+#include <math.h>
+   21 | 
+arm-none-eabi-gcc -o "SPWM_new_method_mostly_software.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\SPWM_new_method_mostly_software\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPWM_new_method_mostly_software.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SPWM_new_method_mostly_software.elf
+ 
+arm-none-eabi-size   SPWM_new_method_mostly_software.elf 
+arm-none-eabi-objdump -h -S  SPWM_new_method_mostly_software.elf  > "SPWM_new_method_mostly_software.list"
+   text	   data	    bss	    dec	    hex	filename
+  13784	     24	   1640	  15448	   3c58	SPWM_new_method_mostly_software.elf
+Finished building: default.size.stdout
+ 
+Finished building: SPWM_new_method_mostly_software.list
+ 
+
+03:23:01 Build Finished. 0 errors, 2 warnings. (took 670ms)
+

@@ -1,0 +1,10 @@
+15:26:21 **** Build of configuration Debug for project boost conv ****
+make -j20 all 
+arm-none-eabi-size   boost\ conv.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8556	     20	   1644	  10220	   27ec	boost conv.elf
+Finished building: default.size.stdout
+ 
+
+15:26:21 Build Finished. 0 errors, 0 warnings. (took 171ms)
+

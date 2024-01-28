@@ -1,0 +1,17 @@
+15:29:29 **** Incremental Build of configuration Debug for project External Trigger ****
+make -j20 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f103cbtx.d" -MT"Core/Startup/startup_stm32f103cbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f103cbtx.o" "../Core/Startup/startup_stm32f103cbtx.s"
+arm-none-eabi-gcc -o "External Trigger.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\External Trigger\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External Trigger.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: External Trigger.elf
+ 
+arm-none-eabi-size   External\ Trigger.elf 
+arm-none-eabi-objdump -h -S  External\ Trigger.elf  > "External Trigger.list"
+   text	   data	    bss	    dec	    hex	filename
+   8920	     20	   1716	  10656	   29a0	External Trigger.elf
+Finished building: default.size.stdout
+ 
+Finished building: External Trigger.list
+ 
+
+15:29:30 Build Finished. 0 errors, 0 warnings. (took 570ms)
+
