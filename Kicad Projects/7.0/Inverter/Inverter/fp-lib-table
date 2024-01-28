@@ -7,4 +7,5 @@
   (lib (name "25V 1000uf")(type "KiCad")(uri "${KIPRJMOD}/Libraries/EEEFK1E102AQ")(options "")(descr ""))
   (lib (name "8205a")(type "KiCad")(uri "${KIPRJMOD}/Libraries/FS8205")(options "")(descr ""))
   (lib (name "Blue Pill")(type "KiCad")(uri "${KIPRJMOD}/Libraries/Bluepill/chinabluepill.pretty")(options "")(descr ""))
+  (lib (name "ADUM4195-1")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ADUM4195-1/footprints.pretty")(options "")(descr ""))
 )
