@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 1.0
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [],
@@ -429,7 +429,7 @@
       "netlist": "",
       "specctra_dsn": "",
       "step": "",
-      "vrml": ""
+      "vrml": "../../../../../../3D Shit i export/Inverter.wrl"
     },
     "page_layout_descr_file": ""
   },
