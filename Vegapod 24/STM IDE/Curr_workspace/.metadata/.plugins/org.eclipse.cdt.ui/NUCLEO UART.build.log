@@ -1,0 +1,10 @@
+18:12:31 **** Incremental Build of configuration Debug for project NUCLEO UART ****
+make -j20 all 
+arm-none-eabi-size   NUCLEO\ UART.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25648	     36	   1860	  27544	   6b98	NUCLEO UART.elf
+Finished building: default.size.stdout
+ 
+
+18:12:32 Build Finished. 0 errors, 0 warnings. (took 226ms)
+

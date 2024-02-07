@@ -60,8 +60,8 @@ all: main-build
 main-build: LU.elf secondary-outputs
 
 # Tool invocations
-LU.elf LU.map: $(OBJS) $(USER_OBJS) C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\LU\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LU.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\LU\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LU.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LU.elf LU.map: $(OBJS) $(USER_OBJS) D:\Download\Vegapod\Vegapod\ 24\STM\ IDE\Inverter_Workspace\LU\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LU.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Download\Vegapod\Vegapod 24\STM IDE\Inverter_Workspace\LU\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LU.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

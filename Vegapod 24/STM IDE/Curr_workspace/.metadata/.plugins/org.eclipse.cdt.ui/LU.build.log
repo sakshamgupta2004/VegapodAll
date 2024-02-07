@@ -1,0 +1,10 @@
+20:01:32 **** Incremental Build of configuration Debug for project LU ****
+make -j20 all 
+arm-none-eabi-size   LU.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30900	    492	   1908	  33300	   8214	LU.elf
+Finished building: default.size.stdout
+ 
+
+20:01:33 Build Finished. 0 errors, 0 warnings. (took 277ms)
+

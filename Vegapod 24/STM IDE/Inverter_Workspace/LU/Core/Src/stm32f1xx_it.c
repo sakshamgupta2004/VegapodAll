@@ -56,7 +56,7 @@ int ticks = 0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -184,16 +184,16 @@ void PendSV_Handler(void)
 void SysTick_Handler(void)
 {
   /* USER CODE BEGIN SysTick_IRQn 0 */
-//ticks++;
+ticks++;
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
-if (ticks >= 500) {
-//	ticks = 0;
-//	  if (targetCurrentma == 10000)
-//		  targetCurrentma = 7000;
+if (ticks >= 1000) {
+	ticks = 0;
+//	  if (targetCurrentma == 1000)
+//		  targetCurrentma = 11000;
 //	  else
-//		  targetCurrentma = 10000;
+//		  targetCurrentma = 1000;
 }
   /* USER CODE END SysTick_IRQn 1 */
 }
@@ -204,6 +204,20 @@ if (ticks >= 500) {
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles USART1 global interrupt.
+  */
+void USART1_IRQHandler(void)
+{
+  /* USER CODE BEGIN USART1_IRQn 0 */
+
+  /* USER CODE END USART1_IRQn 0 */
+  HAL_UART_IRQHandler(&huart1);
+  /* USER CODE BEGIN USART1_IRQn 1 */
+
+  /* USER CODE END USART1_IRQn 1 */
+}
 
 /* USER CODE BEGIN 1 */
 
