@@ -1,4 +1,4 @@
-19:05:19 **** Incremental Build of configuration Debug for project LU ****
+17:17:22 **** Incremental Build of configuration Debug for project LU ****
 make -j20 all 
 arm-none-eabi-size   LU.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   LU.elf
 Finished building: default.size.stdout
  
 
-19:05:19 Build Finished. 0 errors, 0 warnings. (took 223ms)
+17:17:22 Build Finished. 0 errors, 0 warnings. (took 229ms)
 
