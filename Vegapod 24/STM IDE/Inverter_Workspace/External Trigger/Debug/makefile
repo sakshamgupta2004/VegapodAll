@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := External Trigger
+BUILD_ARTIFACT_NAME := ExternalClockSignalBluePillPWM
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-External\ Trigger.elf \
+ExternalClockSignalBluePillPWM.elf \
 
 MAP_FILES += \
-External\ Trigger.map \
+ExternalClockSignalBluePillPWM.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-External\ Trigger.list \
+ExternalClockSignalBluePillPWM.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: External\ Trigger.elf secondary-outputs
+main-build: ExternalClockSignalBluePillPWM.elf secondary-outputs
 
 # Tool invocations
-External\ Trigger.elf External\ Trigger.map: $(OBJS) $(USER_OBJS) C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\External\ Trigger\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "External Trigger.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"C:\Users\saksh\STM32CubeIDE\Inverter_Workspace\External Trigger\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="External Trigger.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+ExternalClockSignalBluePillPWM.elf ExternalClockSignalBluePillPWM.map: $(OBJS) $(USER_OBJS) D:\Download\Vegapod\Vegapod\ 24\STM\ IDE\Inverter_Workspace\External\ Trigger\STM32F103CBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "ExternalClockSignalBluePillPWM.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Download\Vegapod\Vegapod 24\STM IDE\Inverter_Workspace\External Trigger\STM32F103CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ExternalClockSignalBluePillPWM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-External\ Trigger.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "External Trigger.list"
+ExternalClockSignalBluePillPWM.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "ExternalClockSignalBluePillPWM.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) External\ Trigger.elf External\ Trigger.list External\ Trigger.map External\\ Trigger.elf default.size.stdout
+	-$(RM) ExternalClockSignalBluePillPWM.elf ExternalClockSignalBluePillPWM.list ExternalClockSignalBluePillPWM.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)

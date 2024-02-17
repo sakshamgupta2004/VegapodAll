@@ -1,10 +1,30 @@
-17:17:22 **** Incremental Build of configuration Debug for project LU ****
+01:07:48 **** Incremental Build of configuration Debug for project LU ****
 make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:131:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+  131 |    if(HAL_UART_Receive(&huart1,con_sig,9,10) != HAL_OK) {
+      |                                ^~~~~~~
+      |                                |
+      |                                char *
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:338,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h:750:72: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'char *'
+  750 | HAL_StatusTypeDef HAL_UART_Receive(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                               ~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "LU.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Download\Vegapod\Vegapod 24\STM IDE\Inverter_Workspace\LU\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LU.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LU.elf
+ 
 arm-none-eabi-size   LU.elf 
+arm-none-eabi-objdump -h -S  LU.elf  > "LU.list"
    text	   data	    bss	    dec	    hex	filename
-  30612	    492	   1812	  32916	   8094	LU.elf
+  32508	    492	   1812	  34812	   87fc	LU.elf
 Finished building: default.size.stdout
  
+Finished building: LU.list
+ 
 
-17:17:22 Build Finished. 0 errors, 0 warnings. (took 229ms)
+01:07:49 Build Finished. 0 errors, 1 warnings. (took 659ms)
 

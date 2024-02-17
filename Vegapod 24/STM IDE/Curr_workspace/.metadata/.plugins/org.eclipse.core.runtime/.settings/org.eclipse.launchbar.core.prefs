@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUCLEO UART Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PID_Controller Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU Debug (1)
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:NUCLEO UART Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:PID_Controller Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:External Trigger Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ExternalClockSignalBluePillPWM Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU\ Debug\ (1)/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:LU\ Debug\ (1)/activeLaunchTarget=null\:---

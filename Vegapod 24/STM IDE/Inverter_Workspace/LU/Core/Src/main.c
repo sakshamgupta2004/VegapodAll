@@ -51,7 +51,8 @@ UART_HandleTypeDef huart1;
 uint16_t value1;
 uint16_t value2;
 char con_sig[10];
-int targetCurrentma = 100, currentma, currPWM;
+int currentma, currPWM;
+float targetCurrentma = 8000;
 #define txBuff_size 10
 char txBuffer[txBuff_size] = "Hello";
 #define rxBuff_size 10
@@ -127,18 +128,25 @@ HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 //	  sprintf(txBuffer,"%d\n",number);
 	  //HAL_Delay(50);
 	  //HAL_UART_Transmit(&huart1, (uint8_t*)txBuffer,  strlen(txBuffer),500);
-	  if(HAL_UART_Receive(&huart1,con_sig,sizeof(con_sig),10) != HAL_OK) {
+	  if(HAL_UART_Receive(&huart1,con_sig,9,10) != HAL_OK) {
 		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 		  //HAL_Delay(1000);
 	  }
 	  //HAL_Delay(100);
-	  targetCurrentma = atof(con_sig);
+	  //targetCurrentma = 10000;
+	  targetCurrentma = (atof(con_sig))*1000;
+	  if (targetCurrentma > 12000) {
+		  targetCurrentma = 12000;
+	  }
+	  else if (targetCurrentma < 0) {
+		  targetCurrentma = 2000;
+	  }
 	  HAL_ADC_PollForConversion(&hadc1, 0);
 	  value1 = HAL_ADC_GetValue(&hadc1);
 	  	  currentma = (value1 * 10000)/2481;
 	  	  if (currentma > targetCurrentma) currPWM--;
 	  	  else if (currentma < targetCurrentma)currPWM++;
-	  	  if (currPWM > 1300) currPWM = 1300;
+	  	  if (currPWM > 1250) currPWM = 1250;
 	  	  else if (currPWM < 0) currPWM = 0;
 	  	  TIM1->CCR1=currPWM;
 
@@ -251,6 +259,7 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 0 */
 
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
   TIM_MasterConfigTypeDef sMasterConfig = {0};
   TIM_OC_InitTypeDef sConfigOC = {0};
   TIM_BreakDeadTimeConfigTypeDef sBreakDeadTimeConfig = {0};
@@ -265,6 +274,15 @@ static void MX_TIM1_Init(void)
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim1, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
   if (HAL_TIM_PWM_Init(&htim1) != HAL_OK)
   {
     Error_Handler();
@@ -289,7 +307,7 @@ static void MX_TIM1_Init(void)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;
-  sBreakDeadTimeConfig.DeadTime = 144;
+  sBreakDeadTimeConfig.DeadTime = 120;
   sBreakDeadTimeConfig.BreakState = TIM_BREAK_DISABLE;
   sBreakDeadTimeConfig.BreakPolarity = TIM_BREAKPOLARITY_HIGH;
   sBreakDeadTimeConfig.AutomaticOutput = TIM_AUTOMATICOUTPUT_DISABLE;
