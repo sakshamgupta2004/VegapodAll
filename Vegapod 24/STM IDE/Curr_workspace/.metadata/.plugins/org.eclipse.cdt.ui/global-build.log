@@ -661,3 +661,10 @@ Finished building: default.size.stdout
  
 Finished building: ExternalClockSignalBluePillPWM.list
  
+19:25:08 **** Incremental Build of configuration Debug for project ExternalClockSignalBluePillPWM ****
+make -j20 all 
+arm-none-eabi-size   ExternalClockSignalBluePillPWM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13868	     20	   1776	  15664	   3d30	ExternalClockSignalBluePillPWM.elf
+Finished building: default.size.stdout
+ 

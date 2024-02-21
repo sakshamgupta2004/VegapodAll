@@ -7169,3 +7169,12 @@
 2024-02-19 20:26:28,766 [ERROR] ConfigurationRetriever:139 - IOException on connection: Read timed out
 2024-02-19 20:26:30,815 [ERROR] ConfigurationRetriever:139 - IOException on connection: Read timed out
 2024-02-19 20:26:32,864 [ERROR] ConfigurationRetriever:139 - IOException on connection: Read timed out
+2024-02-20 19:24:46,738 [INFO] Activator:177 - 
+
+
+2024-02-20 19:24:46,738 [INFO] Activator:178 - !SESSION log4j initialized
+2024-02-20 19:24:54,658 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.debug.option.cpuclock.412754025 uses a null category that is invalid in its context. The option was ignored.
+2024-02-20 19:24:54,693 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Managed Build system manifest file error: Option com.st.stm32cube.ide.mcu.debug.option.cpuclock.1686675523 uses a null category that is invalid in its context. The option was ignored.
+2024-02-20 19:25:24,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2024-02-20 19:25:24,263 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-02-20 19:25:24,268 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
