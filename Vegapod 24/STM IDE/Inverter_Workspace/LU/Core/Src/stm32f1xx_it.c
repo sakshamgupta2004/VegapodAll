@@ -41,7 +41,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-extern int targetCurrentma;
+
 int ticks = 0;
 /* USER CODE END PV */
 
@@ -56,9 +56,13 @@ int ticks = 0;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
 extern UART_HandleTypeDef huart1;
 /* USER CODE BEGIN EV */
-
+extern ADC_HandleTypeDef hadc1;
+extern int targetCurrentma, currentma, currPWM;
+extern uint16_t value1;
 /* USER CODE END EV */
 
 /******************************************************************************/
@@ -188,6 +192,7 @@ ticks++;
   /* USER CODE END SysTick_IRQn 0 */
   HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
+
 if (ticks >= 1000) {
 	ticks = 0;
 //	  if (targetCurrentma == 1000)
@@ -204,6 +209,46 @@ if (ticks >= 1000) {
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f1xx.s).                    */
 /******************************************************************************/
+
+/**
+  * @brief This function handles TIM1 update interrupt.
+  */
+void TIM1_UP_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM1_UP_IRQn 0 */
+
+  /* USER CODE END TIM1_UP_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim1);
+  /* USER CODE BEGIN TIM1_UP_IRQn 1 */
+  /* USER CODE END TIM1_UP_IRQn 1 */
+}
+
+/**
+  * @brief This function handles TIM2 global interrupt.
+  */
+void TIM2_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM2_IRQn 0 */
+
+  /* USER CODE END TIM2_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim2);
+  /* USER CODE BEGIN TIM2_IRQn 1 */
+  if (targetCurrentma > 10000) {
+      	  		  targetCurrentma = 10000;
+      	  	  }
+      	  	  else if (targetCurrentma < 1200) {
+      	  		  targetCurrentma = 1200;
+      	  	  }
+    	  	  HAL_ADC_PollForConversion(&hadc1, 0);
+    	  	  value1 = HAL_ADC_GetValue(&hadc1);
+    	  	  	  currentma = (value1 * 10000)/1240;
+    	  	  	  if (currentma+1000 > targetCurrentma) currPWM-=5;
+    	  	  	  else if (currentma+1000 < targetCurrentma)currPWM+=5;
+    	  	  	  if (currPWM > 1250) currPWM = 1250;
+    	  	  	  else if (currPWM < 0) currPWM = 0;
+    	  	  	  TIM1->CCR1=currPWM;
+  /* USER CODE END TIM2_IRQn 1 */
+}
 
 /**
   * @brief This function handles USART1 global interrupt.

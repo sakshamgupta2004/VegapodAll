@@ -44,6 +44,7 @@
 ADC_HandleTypeDef hadc1;
 
 TIM_HandleTypeDef htim1;
+TIM_HandleTypeDef htim2;
 
 UART_HandleTypeDef huart1;
 
@@ -52,7 +53,7 @@ uint16_t value1;
 uint16_t value2;
 char con_sig[10];
 int currentma, currPWM;
-float targetCurrentma = 8000;
+int targetCurrentma = 0;
 #define txBuff_size 10
 char txBuffer[txBuff_size] = "Hello";
 #define rxBuff_size 10
@@ -64,6 +65,7 @@ static void MX_GPIO_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_USART1_UART_Init(void);
+static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -112,10 +114,13 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM1_Init();
   MX_USART1_UART_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 HAL_ADC_Start(&hadc1);
-HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+HAL_TIMEx_PWMN_Start_IT(&htim1, TIM_CHANNEL_1);
+HAL_TIM_PWM_Start_IT(&htim1, TIM_CHANNEL_1);
+HAL_TIM_PWM_Start_IT(&htim2, TIM_CHANNEL_1);
+targetCurrentma = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -133,22 +138,9 @@ HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 		  //HAL_Delay(1000);
 	  }
 	  //HAL_Delay(100);
-	  //targetCurrentma = 10000;
-	  targetCurrentma = (atof(con_sig))*1000;
-	  if (targetCurrentma > 10000) {
-		  targetCurrentma = 10000;
-	  }
-	  else if (targetCurrentma < 0) {
-		  targetCurrentma = 0;
-	  }
-	  HAL_ADC_PollForConversion(&hadc1, 0);
-	  value1 = HAL_ADC_GetValue(&hadc1);
-	  	  currentma = (value1 * 10000)/1240;
-	  	  if (currentma > targetCurrentma) currPWM--;
-	  	  else if (currentma < targetCurrentma)currPWM++;
-	  	  if (currPWM > 1250) currPWM = 1250;
-	  	  else if (currPWM < 0) currPWM = 0;
-	  	  TIM1->CCR1=currPWM;
+	 // targetCurrentma = (atof(con_sig))*1000;
+
+
 
   }
   /* USER CODE END 3 */
@@ -319,6 +311,64 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
+
+}
+
+/**
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM2_Init(void)
+{
+
+  /* USER CODE BEGIN TIM2_Init 0 */
+
+  /* USER CODE END TIM2_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_OC_InitTypeDef sConfigOC = {0};
+
+  /* USER CODE BEGIN TIM2_Init 1 */
+
+  /* USER CODE END TIM2_Init 1 */
+  htim2.Instance = TIM2;
+  htim2.Init.Prescaler = 0;
+  htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim2.Init.Period = 5000;
+  htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim2, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_OC_Init(&htim2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim2, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigOC.OCMode = TIM_OCMODE_TIMING;
+  sConfigOC.Pulse = 2500;
+  sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
+  sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
+  if (HAL_TIM_OC_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM2_Init 2 */
+
+  /* USER CODE END TIM2_Init 2 */
 
 }
 

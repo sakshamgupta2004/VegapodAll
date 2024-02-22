@@ -1,9 +1,9 @@
-18:35:58 **** Incremental Build of configuration Debug for project LU ****
+19:15:45 **** Incremental Build of configuration Debug for project LU ****
 make -j20 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:131:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
-  131 |    if(HAL_UART_Receive(&huart1,con_sig,10,10) != HAL_OK) {
+../Core/Src/main.c:136:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Receive' differ in signedness [-Wpointer-sign]
+  136 |    if(HAL_UART_Receive(&huart1,con_sig,10,10) != HAL_OK) {
       |                                ^~~~~~~
       |                                |
       |                                char *
@@ -20,11 +20,11 @@ Finished building target: LU.elf
 arm-none-eabi-size   LU.elf 
 arm-none-eabi-objdump -h -S  LU.elf  > "LU.list"
    text	   data	    bss	    dec	    hex	filename
-  32508	    492	   1812	  34812	   87fc	LU.elf
+  17620	     20	   1868	  19508	   4c34	LU.elf
 Finished building: default.size.stdout
  
 Finished building: LU.list
  
 
-18:35:58 Build Finished. 0 errors, 1 warnings. (took 678ms)
+19:15:46 Build Finished. 0 errors, 1 warnings. (took 541ms)
 
