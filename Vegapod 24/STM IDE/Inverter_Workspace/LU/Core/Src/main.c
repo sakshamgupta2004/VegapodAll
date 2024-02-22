@@ -128,22 +128,22 @@ HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
 //	  sprintf(txBuffer,"%d\n",number);
 	  //HAL_Delay(50);
 	  //HAL_UART_Transmit(&huart1, (uint8_t*)txBuffer,  strlen(txBuffer),500);
-	  if(HAL_UART_Receive(&huart1,con_sig,9,10) != HAL_OK) {
+	  if(HAL_UART_Receive(&huart1,con_sig,10,10) != HAL_OK) {
 		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 		  //HAL_Delay(1000);
 	  }
 	  //HAL_Delay(100);
 	  //targetCurrentma = 10000;
 	  targetCurrentma = (atof(con_sig))*1000;
-	  if (targetCurrentma > 12000) {
-		  targetCurrentma = 12000;
+	  if (targetCurrentma > 10000) {
+		  targetCurrentma = 10000;
 	  }
 	  else if (targetCurrentma < 0) {
-		  targetCurrentma = 2000;
+		  targetCurrentma = 0;
 	  }
 	  HAL_ADC_PollForConversion(&hadc1, 0);
 	  value1 = HAL_ADC_GetValue(&hadc1);
-	  	  currentma = (value1 * 10000)/2481;
+	  	  currentma = (value1 * 10000)/1240;
 	  	  if (currentma > targetCurrentma) currPWM--;
 	  	  else if (currentma < targetCurrentma)currPWM++;
 	  	  if (currPWM > 1250) currPWM = 1250;

@@ -1377,43 +1377,43 @@ int main(void)
  8000f04:	f000 f9f4 	bl	80012f0 <MX_USART1_UART_Init>
   /* USER CODE BEGIN 2 */
 HAL_ADC_Start(&hadc1);
- 8000f08:	484e      	ldr	r0, [pc, #312]	; (8001044 <main+0x158>)
+ 8000f08:	484f      	ldr	r0, [pc, #316]	; (8001048 <main+0x15c>)
  8000f0a:	f000 fda7 	bl	8001a5c <HAL_ADC_Start>
 HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
  8000f0e:	2100      	movs	r1, #0
- 8000f10:	484d      	ldr	r0, [pc, #308]	; (8001048 <main+0x15c>)
+ 8000f10:	484e      	ldr	r0, [pc, #312]	; (800104c <main+0x160>)
  8000f12:	f002 ff49 	bl	8003da8 <HAL_TIMEx_PWMN_Start>
 HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
  8000f16:	2100      	movs	r1, #0
- 8000f18:	484b      	ldr	r0, [pc, #300]	; (8001048 <main+0x15c>)
+ 8000f18:	484c      	ldr	r0, [pc, #304]	; (800104c <main+0x160>)
  8000f1a:	f002 fa75 	bl	8003408 <HAL_TIM_PWM_Start>
 
     /* USER CODE BEGIN 3 */
 //	  sprintf(txBuffer,"%d\n",number);
 	  //HAL_Delay(50);
 	  //HAL_UART_Transmit(&huart1, (uint8_t*)txBuffer,  strlen(txBuffer),500);
-	  if(HAL_UART_Receive(&huart1,con_sig,9,10) != HAL_OK) {
+	  if(HAL_UART_Receive(&huart1,con_sig,10,10) != HAL_OK) {
  8000f1e:	230a      	movs	r3, #10
- 8000f20:	2209      	movs	r2, #9
- 8000f22:	494a      	ldr	r1, [pc, #296]	; (800104c <main+0x160>)
- 8000f24:	484a      	ldr	r0, [pc, #296]	; (8001050 <main+0x164>)
+ 8000f20:	220a      	movs	r2, #10
+ 8000f22:	494b      	ldr	r1, [pc, #300]	; (8001050 <main+0x164>)
+ 8000f24:	484b      	ldr	r0, [pc, #300]	; (8001054 <main+0x168>)
  8000f26:	f003 f900 	bl	800412a <HAL_UART_Receive>
  8000f2a:	4603      	mov	r3, r0
  8000f2c:	2b00      	cmp	r3, #0
  8000f2e:	d004      	beq.n	8000f3a <main+0x4e>
 		  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
  8000f30:	f44f 5100 	mov.w	r1, #8192	; 0x2000
- 8000f34:	4847      	ldr	r0, [pc, #284]	; (8001054 <main+0x168>)
+ 8000f34:	4848      	ldr	r0, [pc, #288]	; (8001058 <main+0x16c>)
  8000f36:	f001 fc29 	bl	800278c <HAL_GPIO_TogglePin>
 		  //HAL_Delay(1000);
 	  }
 	  //HAL_Delay(100);
 	  //targetCurrentma = 10000;
 	  targetCurrentma = (atof(con_sig))*1000;
- 8000f3a:	4844      	ldr	r0, [pc, #272]	; (800104c <main+0x160>)
+ 8000f3a:	4845      	ldr	r0, [pc, #276]	; (8001050 <main+0x164>)
  8000f3c:	f003 fed8 	bl	8004cf0 <atof>
  8000f40:	f04f 0200 	mov.w	r2, #0
- 8000f44:	4b44      	ldr	r3, [pc, #272]	; (8001058 <main+0x16c>)
+ 8000f44:	4b45      	ldr	r3, [pc, #276]	; (800105c <main+0x170>)
  8000f46:	f7ff fac7 	bl	80004d8 <__aeabi_dmul>
  8000f4a:	4602      	mov	r2, r0
  8000f4c:	460b      	mov	r3, r1
@@ -1421,136 +1421,136 @@ HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
  8000f50:	4619      	mov	r1, r3
  8000f52:	f7ff fd7b 	bl	8000a4c <__aeabi_d2f>
  8000f56:	4603      	mov	r3, r0
- 8000f58:	4a40      	ldr	r2, [pc, #256]	; (800105c <main+0x170>)
+ 8000f58:	4a41      	ldr	r2, [pc, #260]	; (8001060 <main+0x174>)
  8000f5a:	6013      	str	r3, [r2, #0]
-	  if (targetCurrentma > 12000) {
- 8000f5c:	4b3f      	ldr	r3, [pc, #252]	; (800105c <main+0x170>)
+	  if (targetCurrentma > 10000) {
+ 8000f5c:	4b40      	ldr	r3, [pc, #256]	; (8001060 <main+0x174>)
  8000f5e:	681b      	ldr	r3, [r3, #0]
- 8000f60:	493f      	ldr	r1, [pc, #252]	; (8001060 <main+0x174>)
+ 8000f60:	4940      	ldr	r1, [pc, #256]	; (8001064 <main+0x178>)
  8000f62:	4618      	mov	r0, r3
  8000f64:	f7ff ff3c 	bl	8000de0 <__aeabi_fcmpgt>
  8000f68:	4603      	mov	r3, r0
  8000f6a:	2b00      	cmp	r3, #0
  8000f6c:	d003      	beq.n	8000f76 <main+0x8a>
-		  targetCurrentma = 12000;
- 8000f6e:	4b3b      	ldr	r3, [pc, #236]	; (800105c <main+0x170>)
- 8000f70:	4a3b      	ldr	r2, [pc, #236]	; (8001060 <main+0x174>)
+		  targetCurrentma = 10000;
+ 8000f6e:	4b3c      	ldr	r3, [pc, #240]	; (8001060 <main+0x174>)
+ 8000f70:	4a3c      	ldr	r2, [pc, #240]	; (8001064 <main+0x178>)
  8000f72:	601a      	str	r2, [r3, #0]
- 8000f74:	e00c      	b.n	8000f90 <main+0xa4>
+ 8000f74:	e00d      	b.n	8000f92 <main+0xa6>
 	  }
 	  else if (targetCurrentma < 0) {
- 8000f76:	4b39      	ldr	r3, [pc, #228]	; (800105c <main+0x170>)
+ 8000f76:	4b3a      	ldr	r3, [pc, #232]	; (8001060 <main+0x174>)
  8000f78:	681b      	ldr	r3, [r3, #0]
  8000f7a:	f04f 0100 	mov.w	r1, #0
  8000f7e:	4618      	mov	r0, r3
  8000f80:	f7ff ff10 	bl	8000da4 <__aeabi_fcmplt>
  8000f84:	4603      	mov	r3, r0
  8000f86:	2b00      	cmp	r3, #0
- 8000f88:	d002      	beq.n	8000f90 <main+0xa4>
-		  targetCurrentma = 2000;
- 8000f8a:	4b34      	ldr	r3, [pc, #208]	; (800105c <main+0x170>)
- 8000f8c:	4a35      	ldr	r2, [pc, #212]	; (8001064 <main+0x178>)
- 8000f8e:	601a      	str	r2, [r3, #0]
+ 8000f88:	d003      	beq.n	8000f92 <main+0xa6>
+		  targetCurrentma = 0;
+ 8000f8a:	4b35      	ldr	r3, [pc, #212]	; (8001060 <main+0x174>)
+ 8000f8c:	f04f 0200 	mov.w	r2, #0
+ 8000f90:	601a      	str	r2, [r3, #0]
 	  }
 	  HAL_ADC_PollForConversion(&hadc1, 0);
- 8000f90:	2100      	movs	r1, #0
- 8000f92:	482c      	ldr	r0, [pc, #176]	; (8001044 <main+0x158>)
- 8000f94:	f000 fe10 	bl	8001bb8 <HAL_ADC_PollForConversion>
+ 8000f92:	2100      	movs	r1, #0
+ 8000f94:	482c      	ldr	r0, [pc, #176]	; (8001048 <main+0x15c>)
+ 8000f96:	f000 fe0f 	bl	8001bb8 <HAL_ADC_PollForConversion>
 	  value1 = HAL_ADC_GetValue(&hadc1);
- 8000f98:	482a      	ldr	r0, [pc, #168]	; (8001044 <main+0x158>)
- 8000f9a:	f000 ff13 	bl	8001dc4 <HAL_ADC_GetValue>
- 8000f9e:	4603      	mov	r3, r0
- 8000fa0:	b29a      	uxth	r2, r3
- 8000fa2:	4b31      	ldr	r3, [pc, #196]	; (8001068 <main+0x17c>)
- 8000fa4:	801a      	strh	r2, [r3, #0]
-	  	  currentma = (value1 * 10000)/2481;
- 8000fa6:	4b30      	ldr	r3, [pc, #192]	; (8001068 <main+0x17c>)
- 8000fa8:	881b      	ldrh	r3, [r3, #0]
- 8000faa:	461a      	mov	r2, r3
- 8000fac:	f242 7310 	movw	r3, #10000	; 0x2710
- 8000fb0:	fb02 f303 	mul.w	r3, r2, r3
- 8000fb4:	4a2d      	ldr	r2, [pc, #180]	; (800106c <main+0x180>)
- 8000fb6:	fb82 1203 	smull	r1, r2, r2, r3
- 8000fba:	1292      	asrs	r2, r2, #10
- 8000fbc:	17db      	asrs	r3, r3, #31
- 8000fbe:	1ad3      	subs	r3, r2, r3
- 8000fc0:	4a2b      	ldr	r2, [pc, #172]	; (8001070 <main+0x184>)
- 8000fc2:	6013      	str	r3, [r2, #0]
+ 8000f9a:	482b      	ldr	r0, [pc, #172]	; (8001048 <main+0x15c>)
+ 8000f9c:	f000 ff12 	bl	8001dc4 <HAL_ADC_GetValue>
+ 8000fa0:	4603      	mov	r3, r0
+ 8000fa2:	b29a      	uxth	r2, r3
+ 8000fa4:	4b30      	ldr	r3, [pc, #192]	; (8001068 <main+0x17c>)
+ 8000fa6:	801a      	strh	r2, [r3, #0]
+	  	  currentma = (value1 * 10000)/1240;
+ 8000fa8:	4b2f      	ldr	r3, [pc, #188]	; (8001068 <main+0x17c>)
+ 8000faa:	881b      	ldrh	r3, [r3, #0]
+ 8000fac:	461a      	mov	r2, r3
+ 8000fae:	f242 7310 	movw	r3, #10000	; 0x2710
+ 8000fb2:	fb02 f303 	mul.w	r3, r2, r3
+ 8000fb6:	4a2d      	ldr	r2, [pc, #180]	; (800106c <main+0x180>)
+ 8000fb8:	fb82 1203 	smull	r1, r2, r2, r3
+ 8000fbc:	11d2      	asrs	r2, r2, #7
+ 8000fbe:	17db      	asrs	r3, r3, #31
+ 8000fc0:	1ad3      	subs	r3, r2, r3
+ 8000fc2:	4a2b      	ldr	r2, [pc, #172]	; (8001070 <main+0x184>)
+ 8000fc4:	6013      	str	r3, [r2, #0]
 	  	  if (currentma > targetCurrentma) currPWM--;
- 8000fc4:	4b2a      	ldr	r3, [pc, #168]	; (8001070 <main+0x184>)
- 8000fc6:	681b      	ldr	r3, [r3, #0]
- 8000fc8:	4618      	mov	r0, r3
- 8000fca:	f7ff fe49 	bl	8000c60 <__aeabi_i2f>
- 8000fce:	4602      	mov	r2, r0
- 8000fd0:	4b22      	ldr	r3, [pc, #136]	; (800105c <main+0x170>)
- 8000fd2:	681b      	ldr	r3, [r3, #0]
- 8000fd4:	4619      	mov	r1, r3
- 8000fd6:	4610      	mov	r0, r2
- 8000fd8:	f7ff ff02 	bl	8000de0 <__aeabi_fcmpgt>
- 8000fdc:	4603      	mov	r3, r0
- 8000fde:	2b00      	cmp	r3, #0
- 8000fe0:	d005      	beq.n	8000fee <main+0x102>
- 8000fe2:	4b24      	ldr	r3, [pc, #144]	; (8001074 <main+0x188>)
- 8000fe4:	681b      	ldr	r3, [r3, #0]
- 8000fe6:	3b01      	subs	r3, #1
- 8000fe8:	4a22      	ldr	r2, [pc, #136]	; (8001074 <main+0x188>)
- 8000fea:	6013      	str	r3, [r2, #0]
- 8000fec:	e013      	b.n	8001016 <main+0x12a>
+ 8000fc6:	4b2a      	ldr	r3, [pc, #168]	; (8001070 <main+0x184>)
+ 8000fc8:	681b      	ldr	r3, [r3, #0]
+ 8000fca:	4618      	mov	r0, r3
+ 8000fcc:	f7ff fe48 	bl	8000c60 <__aeabi_i2f>
+ 8000fd0:	4602      	mov	r2, r0
+ 8000fd2:	4b23      	ldr	r3, [pc, #140]	; (8001060 <main+0x174>)
+ 8000fd4:	681b      	ldr	r3, [r3, #0]
+ 8000fd6:	4619      	mov	r1, r3
+ 8000fd8:	4610      	mov	r0, r2
+ 8000fda:	f7ff ff01 	bl	8000de0 <__aeabi_fcmpgt>
+ 8000fde:	4603      	mov	r3, r0
+ 8000fe0:	2b00      	cmp	r3, #0
+ 8000fe2:	d005      	beq.n	8000ff0 <main+0x104>
+ 8000fe4:	4b23      	ldr	r3, [pc, #140]	; (8001074 <main+0x188>)
+ 8000fe6:	681b      	ldr	r3, [r3, #0]
+ 8000fe8:	3b01      	subs	r3, #1
+ 8000fea:	4a22      	ldr	r2, [pc, #136]	; (8001074 <main+0x188>)
+ 8000fec:	6013      	str	r3, [r2, #0]
+ 8000fee:	e013      	b.n	8001018 <main+0x12c>
 	  	  else if (currentma < targetCurrentma)currPWM++;
- 8000fee:	4b20      	ldr	r3, [pc, #128]	; (8001070 <main+0x184>)
- 8000ff0:	681b      	ldr	r3, [r3, #0]
- 8000ff2:	4618      	mov	r0, r3
- 8000ff4:	f7ff fe34 	bl	8000c60 <__aeabi_i2f>
- 8000ff8:	4602      	mov	r2, r0
- 8000ffa:	4b18      	ldr	r3, [pc, #96]	; (800105c <main+0x170>)
- 8000ffc:	681b      	ldr	r3, [r3, #0]
- 8000ffe:	4619      	mov	r1, r3
- 8001000:	4610      	mov	r0, r2
- 8001002:	f7ff fecf 	bl	8000da4 <__aeabi_fcmplt>
- 8001006:	4603      	mov	r3, r0
- 8001008:	2b00      	cmp	r3, #0
- 800100a:	d004      	beq.n	8001016 <main+0x12a>
- 800100c:	4b19      	ldr	r3, [pc, #100]	; (8001074 <main+0x188>)
- 800100e:	681b      	ldr	r3, [r3, #0]
- 8001010:	3301      	adds	r3, #1
- 8001012:	4a18      	ldr	r2, [pc, #96]	; (8001074 <main+0x188>)
- 8001014:	6013      	str	r3, [r2, #0]
+ 8000ff0:	4b1f      	ldr	r3, [pc, #124]	; (8001070 <main+0x184>)
+ 8000ff2:	681b      	ldr	r3, [r3, #0]
+ 8000ff4:	4618      	mov	r0, r3
+ 8000ff6:	f7ff fe33 	bl	8000c60 <__aeabi_i2f>
+ 8000ffa:	4602      	mov	r2, r0
+ 8000ffc:	4b18      	ldr	r3, [pc, #96]	; (8001060 <main+0x174>)
+ 8000ffe:	681b      	ldr	r3, [r3, #0]
+ 8001000:	4619      	mov	r1, r3
+ 8001002:	4610      	mov	r0, r2
+ 8001004:	f7ff fece 	bl	8000da4 <__aeabi_fcmplt>
+ 8001008:	4603      	mov	r3, r0
+ 800100a:	2b00      	cmp	r3, #0
+ 800100c:	d004      	beq.n	8001018 <main+0x12c>
+ 800100e:	4b19      	ldr	r3, [pc, #100]	; (8001074 <main+0x188>)
+ 8001010:	681b      	ldr	r3, [r3, #0]
+ 8001012:	3301      	adds	r3, #1
+ 8001014:	4a17      	ldr	r2, [pc, #92]	; (8001074 <main+0x188>)
+ 8001016:	6013      	str	r3, [r2, #0]
 	  	  if (currPWM > 1250) currPWM = 1250;
- 8001016:	4b17      	ldr	r3, [pc, #92]	; (8001074 <main+0x188>)
- 8001018:	681b      	ldr	r3, [r3, #0]
- 800101a:	f240 42e2 	movw	r2, #1250	; 0x4e2
- 800101e:	4293      	cmp	r3, r2
- 8001020:	dd04      	ble.n	800102c <main+0x140>
- 8001022:	4b14      	ldr	r3, [pc, #80]	; (8001074 <main+0x188>)
- 8001024:	f240 42e2 	movw	r2, #1250	; 0x4e2
- 8001028:	601a      	str	r2, [r3, #0]
- 800102a:	e006      	b.n	800103a <main+0x14e>
+ 8001018:	4b16      	ldr	r3, [pc, #88]	; (8001074 <main+0x188>)
+ 800101a:	681b      	ldr	r3, [r3, #0]
+ 800101c:	f240 42e2 	movw	r2, #1250	; 0x4e2
+ 8001020:	4293      	cmp	r3, r2
+ 8001022:	dd04      	ble.n	800102e <main+0x142>
+ 8001024:	4b13      	ldr	r3, [pc, #76]	; (8001074 <main+0x188>)
+ 8001026:	f240 42e2 	movw	r2, #1250	; 0x4e2
+ 800102a:	601a      	str	r2, [r3, #0]
+ 800102c:	e006      	b.n	800103c <main+0x150>
 	  	  else if (currPWM < 0) currPWM = 0;
- 800102c:	4b11      	ldr	r3, [pc, #68]	; (8001074 <main+0x188>)
- 800102e:	681b      	ldr	r3, [r3, #0]
- 8001030:	2b00      	cmp	r3, #0
- 8001032:	da02      	bge.n	800103a <main+0x14e>
- 8001034:	4b0f      	ldr	r3, [pc, #60]	; (8001074 <main+0x188>)
- 8001036:	2200      	movs	r2, #0
- 8001038:	601a      	str	r2, [r3, #0]
+ 800102e:	4b11      	ldr	r3, [pc, #68]	; (8001074 <main+0x188>)
+ 8001030:	681b      	ldr	r3, [r3, #0]
+ 8001032:	2b00      	cmp	r3, #0
+ 8001034:	da02      	bge.n	800103c <main+0x150>
+ 8001036:	4b0f      	ldr	r3, [pc, #60]	; (8001074 <main+0x188>)
+ 8001038:	2200      	movs	r2, #0
+ 800103a:	601a      	str	r2, [r3, #0]
 	  	  TIM1->CCR1=currPWM;
- 800103a:	4b0e      	ldr	r3, [pc, #56]	; (8001074 <main+0x188>)
- 800103c:	681a      	ldr	r2, [r3, #0]
- 800103e:	4b0e      	ldr	r3, [pc, #56]	; (8001078 <main+0x18c>)
- 8001040:	635a      	str	r2, [r3, #52]	; 0x34
-	  if(HAL_UART_Receive(&huart1,con_sig,9,10) != HAL_OK) {
- 8001042:	e76c      	b.n	8000f1e <main+0x32>
- 8001044:	20000200 	.word	0x20000200
- 8001048:	20000230 	.word	0x20000230
- 800104c:	200002c4 	.word	0x200002c4
- 8001050:	20000278 	.word	0x20000278
- 8001054:	40011000 	.word	0x40011000
- 8001058:	408f4000 	.word	0x408f4000
- 800105c:	20000000 	.word	0x20000000
- 8001060:	463b8000 	.word	0x463b8000
- 8001064:	44fa0000 	.word	0x44fa0000
+ 800103c:	4b0d      	ldr	r3, [pc, #52]	; (8001074 <main+0x188>)
+ 800103e:	681a      	ldr	r2, [r3, #0]
+ 8001040:	4b0d      	ldr	r3, [pc, #52]	; (8001078 <main+0x18c>)
+ 8001042:	635a      	str	r2, [r3, #52]	; 0x34
+	  if(HAL_UART_Receive(&huart1,con_sig,10,10) != HAL_OK) {
+ 8001044:	e76b      	b.n	8000f1e <main+0x32>
+ 8001046:	bf00      	nop
+ 8001048:	20000200 	.word	0x20000200
+ 800104c:	20000230 	.word	0x20000230
+ 8001050:	200002c4 	.word	0x200002c4
+ 8001054:	20000278 	.word	0x20000278
+ 8001058:	40011000 	.word	0x40011000
+ 800105c:	408f4000 	.word	0x408f4000
+ 8001060:	20000000 	.word	0x20000000
+ 8001064:	461c4000 	.word	0x461c4000
  8001068:	200002c0 	.word	0x200002c0
- 800106c:	69a91e71 	.word	0x69a91e71
+ 800106c:	1a6d01a7 	.word	0x1a6d01a7
  8001070:	200002d0 	.word	0x200002d0
  8001074:	200002d4 	.word	0x200002d4
  8001078:	40012c00 	.word	0x40012c00

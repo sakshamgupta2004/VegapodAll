@@ -1,4 +1,4 @@
-19:25:08 **** Incremental Build of configuration Debug for project ExternalClockSignalBluePillPWM ****
+18:04:30 **** Incremental Build of configuration Debug for project ExternalClockSignalBluePillPWM ****
 make -j20 all 
 arm-none-eabi-size   ExternalClockSignalBluePillPWM.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   ExternalClockSignalBluePillPWM.elf
 Finished building: default.size.stdout
  
 
-19:25:10 Build Finished. 0 errors, 0 warnings. (took 1s.524ms)
+18:04:31 Build Finished. 0 errors, 0 warnings. (took 412ms)
 
