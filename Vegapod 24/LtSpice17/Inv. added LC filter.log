@@ -1,0 +1,82 @@
+Circuit: * D:\Download\Vegapod\Vegapod 24\LtSpice17\Inv. added LC filter.asc
+
+Limiting rise time of source v5 to 5e-007
+Limiting fall time of source v5 to 5e-007
+Limiting rise time of source v2 to 5e-007
+Limiting fall time of source v2 to 5e-007
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Gmin = 1000
+Gmin = 107.374
+Gmin = 11.5292
+Gmin = 1.23794
+Gmin = 0.132923
+Gmin = 0.0142725
+Gmin = 0.0015325
+Gmin = 0.00016455
+Gmin = 1.76685e-005
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+Gmin = 1.54637e-005
+vernier = 0.03125
+vernier = 0.0416667
+Gmin = 1.44926e-005
+vernier = 0.0555555
+vernier = 0.074074
+Gmin = 1.25969e-005
+vernier = 0.0987653
+Gmin = 1.01119e-005
+vernier = 0.131687
+vernier = 0.175583
+Gmin = 7.01129e-006
+vernier = 0.23411
+vernier = 0.312147
+vernier = 0.156073
+Gmin = 4.57373e-006
+vernier = 0.0780367
+vernier = 0.0390184
+vernier = 0.0195092
+vernier = 0.00975459
+vernier = 0.0048773
+vernier = 0.00243865
+vernier = 0.00121932
+vernier = 0.000609662
+vernier = 0.000457246
+Gmin = 0
+Gmin = 0
+Gmin stepping failed
+
+Starting source stepping with srcstepmethod=0
+Could not converge to DC with sources off!
+Starting source stepping with srcstepmethod=1
+Source Step = 3.0303%
+Source Step = 24.4318%
+vernier = 0.015625
+Source Step = 24.2661%
+Source stepping failed
+
+Pseudo transient terminated at 100.158 s, solution accepted ready or not!
+Heightened Def Con from 0.000685788 to 0.000685788
+
+Date: Fri Mar 08 01:10:43 2024
+Total elapsed time: 9.939 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 290019
+traniter = 281242
+tranpoints = 79793
+accept = 58968
+rejected = 20827
+matrix size = 198
+fillins = 305
+solver = Alternate
+Thread vector: 21.6/11.9[5] 7.9/4.4[5] 2.3/2.0[2] 2.2/2.5[1]  2592/500
+Matrix Compiler1: 35.85 KB object code size  6.9/4.7/[3.7]
+Matrix Compiler2: 25.35 KB object code size  3.4/3.6/[1.9]
+
