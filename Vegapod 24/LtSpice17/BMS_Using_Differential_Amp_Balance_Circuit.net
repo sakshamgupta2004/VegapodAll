@@ -1,0 +1,32 @@
+* D:\Download\Vegapod\Vegapod 24\LtSpice17\BMS_Using_Differential_Amp_Balance_Circuit.asc
+V1 N002 N003 3.7 Rser=1m
+V2 N003 N008 3.7 Rser=1m
+V3 N008 N010 3.7 Rser=1m
+V4 N010 N011 3.7 Rser=1m
+V5 N011 N012 3.7 Rser=1m
+V6 N012 0 3.7 Rser=1m
+R1 N009 0 1k
+Q1 NC_01 N004 N007 0 NPN
+R3 N004 N005 2.2k
+D1 N007 N004 1N4148
+XU1 N009 N001 NC_02 0 N006 level4 Avol=1Meg GBW=10Meg Slew=10Meg Ilimit=25m Rail=0 Vos=0 Phimargin=45 En=0 Enk=0 In=0 Ink=0 Rin=500Meg Ro=1k Ccm=1p Cdiff=2p
+D2 N006 N005 D
+D3 P001 0 1N4148
+D4 N001 P001 1N4148
+V7 N009 0 PULSE(0 5 0 0 0 1m 10m)
+R2 N002 0 94k
+R4 0 N003 47k
+R5 0 N008 47k
+R6 0 N010 47k
+R7 0 N011 47k
+R8 0 N012 47k
+R9 N002 N012 235k
+.model D D
+.lib C:\Users\saksh\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\saksh\OneDrive\Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 1s
+.lib UniversalOpAmp4.lib
+.backanno
+.end
