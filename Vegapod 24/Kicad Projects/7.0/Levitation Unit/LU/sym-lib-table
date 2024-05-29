@@ -6,4 +6,7 @@
   (lib (name "B0505-2W")(type "KiCad")(uri "${KIPRJMOD}/Libraries/B0505S-2W/B0505S-2W.kicad_sym")(options "")(descr ""))
   (lib (name "Blue Pill")(type "Legacy")(uri "${KIPRJMOD}/Libraries/Bluepill/china_bluepill.lib")(options "")(descr ""))
   (lib (name "IGBT")(type "KiCad")(uri "${KIPRJMOD}/Libraries/IGBT/F4-75R06W1E3.kicad_sym")(options "")(descr ""))
+  (lib (name "B0505-1WR3")(type "KiCad")(uri "${KIPRJMOD}/Libraries/b0505s-1wr3/2024-03-07_19-46-07.kicad_sym")(options "")(descr ""))
+  (lib (name "ADUM-4195")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ADUM4195-1/2024-01-28_11-49-23.kicad_sym")(options "")(descr ""))
+  (lib (name "STM32G4")(type "KiCad")(uri "${KIPRJMOD}/Libraries/STM32G474RET6/STM32G474RET6.kicad_sym")(options "")(descr ""))
 )

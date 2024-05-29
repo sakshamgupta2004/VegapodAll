@@ -7,4 +7,7 @@
   (lib (name "25V 1000uf")(type "KiCad")(uri "${KIPRJMOD}/Libraries/EEEFK1E102AQ")(options "")(descr ""))
   (lib (name "BLue Pill")(type "KiCad")(uri "${KIPRJMOD}/Libraries/Bluepill/chinabluepill.pretty")(options "")(descr ""))
   (lib (name "IGBT")(type "KiCad")(uri "${KIPRJMOD}/Libraries/IGBT")(options "")(descr ""))
+  (lib (name "B0505-1WR3")(type "KiCad")(uri "${KIPRJMOD}/Libraries/b0505s-1wr3/footprints.pretty")(options "")(descr ""))
+  (lib (name "ADUM-4195")(type "KiCad")(uri "${KIPRJMOD}/Libraries/ADUM4195-1/footprints.pretty")(options "")(descr ""))
+  (lib (name "STM32G4")(type "KiCad")(uri "${KIPRJMOD}/Libraries/STM32G474RET6")(options "")(descr ""))
 )
