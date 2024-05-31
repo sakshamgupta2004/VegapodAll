@@ -1,73 +1,28 @@
 Circuit: * D:\Download\Vegapod\Vegapod 24\LtSpice17\Inverter Trying to measure Current.asc
 
-Limiting rise time of source v5 to 5e-007
-Limiting fall time of source v5 to 5e-007
-Limiting rise time of source v2 to 5e-007
-Limiting fall time of source v2 to 5e-007
-Early termination of direct N-R iteration.
-Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
-Starting Gmin stepping
-Gmin = 10
-Gmin = 1.07374
-Gmin = 0.115292
-Gmin = 0.0123794
-Gmin = 0.00132923
-Gmin = 0.000142725
-Gmin = 1.5325e-005
-vernier = 0.5
-vernier = 0.25
-vernier = 0.125
-vernier = 0.0625
-Gmin = 1.57795e-005
-vernier = 0.03125
-vernier = 0.015625
-Gmin = 1.5355e-005
-vernier = 0.0208333
-vernier = 0.0277778
-Gmin = 1.44774e-005
-vernier = 0.037037
-vernier = 0.0493827
-Gmin = 1.31827e-005
-vernier = 0.0658435
-Gmin = 1.13801e-005
-vernier = 0.0877914
-vernier = 0.117055
-Gmin = 8.90157e-006
-vernier = 0.156073
-vernier = 0.208098
-Gmin = 6.03424e-006
-vernier = 0.277464
-vernier = 0.138732
-vernier = 0.0693659
-vernier = 0.034683
-vernier = 0.0173415
-Gmin = 4.60673e-006
-vernier = 0.00867074
-vernier = 0.00433537
-vernier = 0.00216769
-vernier = 0.00108384
-vernier = 0.000541921
-vernier = 0.000406441
-Gmin = 0
-Gmin stepping succeeded in finding the operating point.
+C11: Increased Cpar to 2e-012
+Limiting rise time of source v5 to 1e-007
+Limiting fall time of source v5 to 1e-007
+Limiting rise time of source v2 to 1e-007
+Limiting fall time of source v2 to 1e-007
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 0.0101548 to 0.0101548
 
-Heightened Def Con from 0.00202038 to 0.00202038
-
-Date: Wed May 22 17:16:42 2024
-Total elapsed time: 25.830 seconds.
+Date: Fri May 31 18:16:21 2024
+Total elapsed time: 145.158 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 818282
-traniter = 815769
-tranpoints = 233050
-accept = 172420
-rejected = 60631
-matrix size = 142
-fillins = 301
+totiter = 4888240
+traniter = 4888198
+tranpoints = 1509725
+accept = 1131579
+rejected = 378147
+matrix size = 147
+fillins = 248
 solver = Alternate
-Thread vector: 15.9/8.5[2] 6.0/4.6[2] 1.1/1.6[1] 2.0/2.2[1]  2592/500
-Matrix Compiler1:    1686 opcodes  6.8/[5.2]/6.2
-Matrix Compiler2: 20.46 KB object code size  1.8/2.2/[1.7]
+Thread vector: 17.5/13.1[2] 6.6/5.1[2] 1.2/1.4[1] 1.9/2.2[1]  2592/500
+Matrix Compiler1: 32.57 KB object code size  5.6/4.6/[3.7]
+Matrix Compiler2: 19.84 KB object code size  2.3/2.6/[1.5]
 
