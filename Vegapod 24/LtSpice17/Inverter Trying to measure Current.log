@@ -1,28 +1,28 @@
 Circuit: * D:\Download\Vegapod\Vegapod 24\LtSpice17\Inverter Trying to measure Current.asc
 
 C11: Increased Cpar to 2e-012
+C5: Increased Cpar to 4.4e-012
 Limiting rise time of source v5 to 1e-007
 Limiting fall time of source v5 to 1e-007
 Limiting rise time of source v2 to 1e-007
 Limiting fall time of source v2 to 1e-007
 Direct Newton iteration for .op point succeeded.
-Heightened Def Con from 0.0101548 to 0.0101548
+Heightened Def Con from 0.000307215 to 0.000307215
 
-Date: Fri May 31 18:16:21 2024
-Total elapsed time: 145.158 seconds.
+Date: Sun Jun 23 03:14:04 2024
+Total elapsed time: 8.828 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 4888240
-traniter = 4888198
-tranpoints = 1509725
-accept = 1131579
-rejected = 378147
-matrix size = 147
-fillins = 248
+totiter = 288789
+traniter = 288747
+tranpoints = 75955
+accept = 56542
+rejected = 19414
+matrix size = 149
+fillins = 258
 solver = Alternate
-Thread vector: 17.5/13.1[2] 6.6/5.1[2] 1.2/1.4[1] 1.9/2.2[1]  2592/500
-Matrix Compiler1: 32.57 KB object code size  5.6/4.6/[3.7]
-Matrix Compiler2: 19.84 KB object code size  2.3/2.6/[1.5]
+Matrix Compiler1: 32.64 KB object code size  4.9/3.9/[3.1]
+Matrix Compiler2: 20.33 KB object code size  2.0/2.5/[1.6]
 
