@@ -1,0 +1,10 @@
+12:29:55 **** Incremental Build of configuration Debug for project FinalCurrentController ****
+make -j20 all 
+arm-none-eabi-size  FinalCurrentController.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35640	     96	   2720	  38456	   9638	FinalCurrentController.elf
+Finished building: default.size.stdout
+ 
+
+12:29:55 Build Finished. 0 errors, 0 warnings. (took 246ms)
+

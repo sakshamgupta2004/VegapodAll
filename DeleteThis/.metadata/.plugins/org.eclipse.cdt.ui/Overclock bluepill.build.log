@@ -1,0 +1,10 @@
+14:52:44 **** Build of configuration Debug for project Overclock bluepill ****
+make -j20 all 
+arm-none-eabi-size  Overclock\ bluepill.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9232	     12	   1644	  10888	   2a88	Overclock bluepill.elf
+Finished building: default.size.stdout
+ 
+
+14:52:44 Build Finished. 0 errors, 0 warnings. (took 309ms)
+
