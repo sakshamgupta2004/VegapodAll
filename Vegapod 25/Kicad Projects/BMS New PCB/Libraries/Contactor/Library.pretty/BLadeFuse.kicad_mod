@@ -1,0 +1,127 @@
+(footprint "BLadeFuse"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -0.5 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "d8c661d5-7266-4ac1-abaa-41a2650ce86b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "BladeFuse"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "da31d4db-9919-471b-a78b-ad650bb620e3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27198540-4816-43f0-bfac-2e1296195eca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63e01421-3392-4b87-8d91-018fd47c0510")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -34.5 -9)
+		(end 34.5 11)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "3560acc1-36d3-4617-917c-b0af6c67390c")
+	)
+	(fp_rect
+		(start -14.5 -8.75)
+		(end 14.5 10.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "Edge.Cuts")
+		(uuid "2872b0b4-7286-439d-b8d3-b6ee4035062c")
+	)
+	(fp_rect
+		(start -34.5 -9)
+		(end 34.5 11)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "91b710e0-e039-42cd-b813-a288a232179e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 2.5 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e34bfdae-3324-4832-aa70-acf8dfdc2902")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at -25.4 1)
+		(size 18 16)
+		(drill 8.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "31f1c87e-48d2-4a6f-85fb-b75e2521bc04")
+	)
+	(pad "2" thru_hole roundrect
+		(at 25.4 1 180)
+		(size 18 16)
+		(drill 8.5
+			(offset 1.5 0)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.1)
+		(thermal_bridge_angle 45)
+		(uuid "4078ec94-2e9d-45e7-ae91-9570cc1c7461")
+	)
+	(embedded_fonts no)
+)
