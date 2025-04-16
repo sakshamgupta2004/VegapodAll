@@ -1,0 +1,65 @@
+Circuit: * D:\Download\Vegapod\Vegapod 24\LtSpice17\Draft2.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Increasing initial diagonal Gmin to 100
+Increasing initial diagonal Gmin to 1000
+Increasing initial diagonal Gmin to 10000
+Gmin = 10000
+Gmin = 1073.74
+Gmin = 115.292
+Gmin = 12.3794
+Gmin = 1.32923
+Gmin = 0.142725
+Gmin = 0.015325
+Gmin = 0.0016455
+Gmin = 0.000176685
+Gmin = 1.89714e-005
+Gmin = 2.03704e-006
+vernier = 0.5
+vernier = 0.25
+Gmin = 8.21218e-007
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.0833333
+Gmin = 7.74837e-007
+vernier = 0.111111
+Gmin = 6.05335e-007
+vernier = 0.148148
+vernier = 0.197531
+Gmin = 4.01324e-007
+vernier = 0.263374
+vernier = 0.351165
+Gmin = 2.10075e-007
+vernier = 0.46822
+Gmin = 7.72227e-008
+vernier = 0.624294
+vernier = 0.832392
+Gmin = 1.51853e-008
+vernier = 1
+Gmin = 1.74558e-009
+Gmin = 1.8743e-010
+Gmin = 2.01252e-011
+Gmin = 2.16092e-012
+Gmin = 2.32027e-013
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Sat Apr 05 17:02:33 2025
+Total elapsed time: 0.853 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 55914
+traniter = 54466
+tranpoints = 17879
+accept = 12051
+rejected = 5828
+matrix size = 65
+fillins = 97
+solver = Alternate
+Matrix Compiler1: 14.90 KB object code size  2.3/1.7/[1.4]
+Matrix Compiler2: 8.91 KB object code size  0.7/0.9/[0.6]
+
